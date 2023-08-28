@@ -21,6 +21,21 @@ impl Time {
         let milliseconds = self.milliseconds + (seconds * 1000);
         Duration::from_millis(milliseconds)
     }
+
+    pub fn new(milliseconds: u64) -> Self {
+        let hours = milliseconds / 1000 / 60 / 60;
+        let milliseconds = milliseconds % (60 * 60 * 1000);
+        let minutes = milliseconds / 1000 / 60;
+        let milliseconds = milliseconds % (60 * 1000);
+        let seconds = milliseconds / 1000;
+        let milliseconds = milliseconds % 1000;
+        Time {
+            hours,
+            minutes,
+            seconds,
+            milliseconds,
+        }
+    }
 }
 
 impl fmt::Display for Time {

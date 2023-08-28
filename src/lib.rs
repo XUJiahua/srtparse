@@ -24,9 +24,11 @@ pub use self::{
     parser::ParseError,
     reader::{from_file, from_reader, from_str, ReaderError},
     time::{ParseTimeError, Time},
+    writer::convert_items_to_string,
 };
 
 mod item;
 mod parser;
 mod reader;
 mod time;
+mod writer;
