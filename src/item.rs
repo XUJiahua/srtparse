@@ -18,7 +18,7 @@ impl fmt::Display for Item {
     fn fmt(&self, out: &mut fmt::Formatter) -> fmt::Result {
         write!(
             out,
-            "{}\n{}-->{}\n{}",
+            "{}\n{} --> {}\n{}",
             self.pos, self.start_time, self.end_time, self.text
         )
     }
