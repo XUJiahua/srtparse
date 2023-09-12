@@ -42,7 +42,7 @@ impl fmt::Display for Time {
     fn fmt(&self, out: &mut fmt::Formatter) -> fmt::Result {
         write!(
             out,
-            "{:02}:{:02}:{:02},{}",
+            "{:02}:{:02}:{:02},{:03}",
             self.hours, self.minutes, self.seconds, self.milliseconds
         )
     }
